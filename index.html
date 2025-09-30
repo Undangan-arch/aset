@@ -258,7 +258,7 @@
             padding: 30px 20px;
             background: transparent;
             border-radius: 10px;
-            margin-top: 330px;
+            margin-top: 200px;
             animation: fadeIn 1.5s ease-out 1.2s both;
             position: relative;
             z-index: 2;
@@ -922,7 +922,7 @@
             transform: translateY(-2px);
         }
         
-        /* Ucapan & Doa Section - DIPERBARUI */
+        /* Ucapan & Doa Section */
         .wishes-section {
             background-color: #faf9fc;
         }
@@ -985,14 +985,9 @@
             margin: 0 auto;
         }
         
-        .submit-btn:hover:not(:disabled) {
+        .submit-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(138, 109, 180, 0.3);
-        }
-        
-        .submit-btn:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
         }
         
         .wishes-list {
@@ -1006,7 +1001,6 @@
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
             margin-bottom: 20px;
             transition: transform 0.3s ease;
-            border-left: 4px solid #8a6db4;
         }
         
         .wish-item:hover {
@@ -1017,22 +1011,11 @@
             font-weight: 600;
             color: #8a6db4;
             margin-bottom: 8px;
-            display: flex;
-            align-items: center;
         }
         
         .wish-message {
             color: #5a4b69;
             font-style: italic;
-            line-height: 1.5;
-            margin-bottom: 10px;
-        }
-        
-        .wish-time {
-            font-size: 0.8rem;
-            color: #888;
-            display: flex;
-            align-items: center;
         }
         
         /* Gift Section */
@@ -1374,31 +1357,6 @@
             text-align: center;
         }
         
-        /* Notifikasi Styles */
-        .notification {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #4CAF50;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 5px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            z-index: 10000;
-            max-width: 400px;
-            animation: slideInRight 0.3s ease-out;
-        }
-        
-        .notification.error {
-            background: #f44336;
-        }
-        
-        .notification-content {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
         /* Animasi Kustom */
         @keyframes fadeInDown {
             from {
@@ -1493,408 +1451,7 @@
             }
         }
         
-        @keyframes slideInRight {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        
-        @keyframes slideOutRight {
-            from { transform: translateX(0); opacity: 1; }
-            to { transform: translateX(100%); opacity: 0; }
-        }
-
-        /* ============================ */
-        /* RESPONSIVE LAYAR BESAR */
-        /* ============================ */
-
-        @media (min-width: 1200px) {
-            /* Container utama lebih lebar */
-            .container {
-                max-width: 1000px;
-            }
-            
-            /* Halaman pembuka - lebih proporsional */
-            .opener-container {
-                padding: 0 50px;
-            }
-            
-            .invitation-container {
-                max-width: 700px;
-                padding: 40px;
-            }
-            
-            .wedding-title {
-                font-size: 5rem;
-            }
-            
-            .couple-names {
-                font-size: 4rem;
-            }
-            
-            .wedding-date {
-                font-size: 1.8rem;
-            }
-            
-            /* Header utama lebih besar */
-            .main-header {
-                padding: 80px 20px;
-            }
-            
-            .main-couple-names {
-                font-size: 4rem;
-            }
-            
-            .main-wedding-date {
-                font-size: 1.8rem;
-            }
-            
-            /* Section padding lebih longgar */
-            .section {
-                padding: 80px 50px;
-            }
-            
-            .section-title {
-                font-size: 2.5rem;
-            }
-            
-            /* Pasangan section - layout lebih baik */
-            .pasangan-card {
-                margin-bottom: 40px;
-            }
-            
-            .pasangan-nama {
-                font-size: 2.8rem;
-            }
-            
-            .pasangan-nama-lengkap {
-                font-size: 1.3rem;
-            }
-            
-            /* Family container lebih seimbang */
-            .family-container {
-                gap: 80px;
-            }
-            
-            .family-card {
-                min-width: 300px;
-                max-width: 350px;
-                padding: 40px;
-            }
-            
-            .family-title {
-                font-size: 2rem;
-            }
-            
-            /* Event card lebih besar */
-            .event-card {
-                padding: 40px;
-                margin-bottom: 40px;
-            }
-            
-            .event-icon {
-                font-size: 3rem;
-                min-width: 80px;
-                margin-right: 35px;
-            }
-            
-            .event-name {
-                font-size: 1.8rem;
-            }
-            
-            /* Countdown lebih besar */
-            .countdown-section {
-                padding: 80px 20px;
-            }
-            
-            .countdown-title {
-                font-size: 2.5rem;
-            }
-            
-            .countdown-item {
-                min-width: 120px;
-                padding: 25px 20px;
-            }
-            
-            .countdown-number {
-                font-size: 3rem;
-            }
-            
-            .countdown-label {
-                font-size: 1rem;
-            }
-            
-            /* Galeri lebih besar */
-            .gallery-slideshow-container {
-                max-width: 900px;
-                height: 600px;
-            }
-            
-            /* Form ucapan lebih lebar */
-            .wishes-container {
-                max-width: 700px;
-            }
-            
-            .wish-form {
-                padding: 40px;
-            }
-            
-            /* Gift section lebih besar */
-            .gift-container {
-                max-width: 700px;
-            }
-            
-            .gift-card {
-                padding: 40px;
-            }
-            
-            .gift-icon {
-                font-size: 3.5rem;
-            }
-            
-            /* Maps section lebih besar */
-            .maps-container {
-                max-width: 700px;
-            }
-            
-            .map-card {
-                padding: 40px;
-            }
-            
-            .map-placeholder {
-                height: 350px;
-                font-size: 1.3rem;
-            }
-            
-            /* Bunga dan ornamen lebih proporsional */
-            .floral-decoration,
-            .main-floral-decoration {
-                width: 100px !important;
-            }
-            
-            .star-decoration,
-            .main-star-decoration {
-                width: 35px !important;
-            }
-            
-            .side-floral-decoration {
-                max-width: 100px;
-            }
-            
-            .side-floral-left {
-                left: 30px;
-                bottom: 120px;
-            }
-            
-            .side-floral-right {
-                right: 30px;
-                bottom: 120px;
-            }
-            
-            /* Bottom navigation lebih lebar */
-            .bottom-nav-container {
-                max-width: 600px;
-            }
-            
-            .nav-item {
-                padding: 10px 8px;
-            }
-            
-            .nav-icon {
-                font-size: 1.3rem;
-            }
-            
-            .nav-label {
-                font-size: 0.8rem;
-            }
-            
-            /* Timeline lebih seimbang */
-            .timeline-content {
-                padding: 25px;
-            }
-            
-            .timeline-title {
-                font-size: 1.5rem;
-            }
-            
-            .timeline-image {
-                height: 200px;
-            }
-            
-            /* Improve readability untuk teks panjang di layar besar */
-            .greeting-text,
-            .inv-body {
-                font-size: 1.1rem;
-                line-height: 1.7;
-            }
-            
-            .wish-message {
-                font-size: 1.05rem;
-                line-height: 1.6;
-            }
-            
-            .timeline-content p {
-                font-size: 1.05rem;
-                line-height: 1.6;
-            }
-            
-            /* Optimasi spacing untuk layar besar */
-            .floral-divider {
-                width: 150px;
-                height: 30px;
-                margin: 20px auto;
-            }
-            
-            .main-floral-divider {
-                width: 180px;
-                height: 35px;
-                margin: 25px auto;
-            }
-            
-            .section-title::after {
-                width: 100px;
-                height: 3px;
-                margin: 20px auto;
-            }
-            
-            /* Tombol lebih besar di layar besar */
-            .open-invitation-btn,
-            .gift-btn,
-            .open-maps-btn,
-            .submit-btn {
-                padding: 18px 45px;
-                font-size: 1.2rem;
-            }
-            
-            .view-more-btn {
-                padding: 15px 35px;
-                font-size: 1.1rem;
-            }
-            
-            .copy-btn {
-                padding: 10px 18px;
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (min-width: 1400px) {
-            /* Untuk layar sangat besar */
-            .container {
-                max-width: 1100px;
-            }
-            
-            .invitation-container {
-                max-width: 800px;
-            }
-            
-            .wedding-title {
-                font-size: 5.5rem;
-            }
-            
-            .couple-names {
-                font-size: 4.5rem;
-            }
-            
-            .main-couple-names {
-                font-size: 4.5rem;
-            }
-            
-            /* Section lebih longgar */
-            .section {
-                padding: 100px 60px;
-            }
-            
-            /* Family container lebih lebar */
-            .family-container {
-                gap: 100px;
-            }
-            
-            .family-card {
-                min-width: 350px;
-                max-width: 400px;
-            }
-            
-            /* Countdown lebih besar */
-            .countdown-item {
-                min-width: 140px;
-                padding: 30px 25px;
-            }
-            
-            .countdown-number {
-                font-size: 3.5rem;
-            }
-            
-            /* Galeri lebih tinggi */
-            .gallery-slideshow-container {
-                height: 700px;
-            }
-            
-            /* Ornamen lebih besar */
-            .floral-decoration,
-            .main-floral-decoration {
-                width: 120px !important;
-            }
-            
-            .side-floral-decoration {
-                max-width: 120px;
-            }
-        }
-
-        @media (min-width: 1600px) {
-            /* Untuk layar extra large */
-            .container {
-                max-width: 1200px;
-            }
-            
-            .section {
-                padding: 120px 70px;
-            }
-            
-            .section-title {
-                font-size: 2.8rem;
-            }
-            
-            .gallery-slideshow-container {
-                max-width: 1000px;
-                height: 800px;
-            }
-            
-            /* Typography lebih besar */
-            .main-couple-names {
-                font-size: 5rem;
-            }
-            
-            .main-wedding-date {
-                font-size: 2rem;
-            }
-            
-            .pasangan-nama {
-                font-size: 3.2rem;
-            }
-        }
-
-        /* FIX UNTUK LAYAR BESAR */
-        @media (min-width: 2000px) {
-            body {
-                display: flex;
-                justify-content: center;
-                background: linear-gradient(135deg, #f9f7fe 0%, #f0edf5 100%);
-            }
-            
-            .opener-container {
-                max-width: 100vw;
-            }
-            
-            .main-invitation {
-                width: 100%;
-            }
-            
-            .container {
-                max-width: 1200px;
-                margin: 0 auto;
-            }
-        }
-        
-        /* Responsif Mobile - TIDAK BERUBAH */
+        /* Responsif */
         @media (max-width: 768px) {
             .wedding-title {
                 font-size: 3.5rem;
@@ -2061,7 +1618,32 @@
                 font-size: 1rem;
             }
         }
-    </style>
+    
+/* Toast Notification */
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background: linear-gradient(135deg, #8a6db4 0%, #b19cd9 100%);
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  padding: 14px 20px;
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  bottom: 30px;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: visibility 0s, opacity 0.5s ease;
+  opacity: 0;
+}
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+</style>
 </head>
 <body>
     <!-- Ornamen Bunga Samping - Ukuran Minimalis -->
@@ -2197,6 +1779,65 @@
                 </div>
             </section>
             
+            <!-- Our Story Section dengan Background Slideshow -->
+            <section id="story" class="section our-story-section">
+                <div class="slideshow-background">
+                    <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80')"></div>
+                    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80')"></div>
+                    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80')"></div>
+                </div>
+                
+                <div class="content-overlay">
+                    <h2 class="section-title inv-sub fade-in">Our Story</h2>
+                    <div class="timeline">
+                        <div class="timeline-item fade-in-left">
+                            <div class="timeline-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date inv-sub fade-in">Maret 2018</div>
+                                <h3 class="timeline-title inv-sub fade-in">Pertemuan Pertama</h3>
+                                <p class="inv-body fade-in">Kami pertama kali bertemu di acara ulang tahun teman bersama. Saat itu kami tidak menyangka bahwa pertemuan itu akan membawa kami pada perjalanan yang indah.</p>
+                                <img src="https://images.unsplash.com/photo-1529255484355-cb73c33c04bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Pertemuan Pertama" class="timeline-image fade-in">
+                            </div>
+                        </div>
+                        <div class="timeline-item fade-in-right">
+                            <div class="timeline-icon">
+                                <i class="fas fa-coffee"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date inv-sub fade-in">Juli 2019</div>
+                                <h3 class="timeline-title inv-sub fade-in">Kencan Pertama</h3>
+                                <p class="inv-body fade-in">Setelah beberapa bulan saling mengenal, akhirnya kami memutuskan untuk pergi kencan pertama di sebuah kafe kecil di pusat kota. Percakapan kami mengalir begitu natural.</p>
+                                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Kencan Pertama" class="timeline-image fade-in">
+                            </div>
+                        </div>
+                        <div class="timeline-item fade-in-left">
+                            <div class="timeline-icon">
+                                <i class="fas fa-plane"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date inv-sub fade-in">Desember 2020</div>
+                                <h3 class="timeline-title inv-sub fade-in">Liburan Bersama</h3>
+                                <p class="inv-body fade-in">Kami menghabiskan liburan akhir tahun di Bali. Perjalanan ini semakin mempererat ikatan kami dan membuat kami sadar bahwa kami ingin menghabiskan lebih banyak waktu bersama.</p>
+                                <img src="https://images.unsplash.com/photo-1533158307587-828f0a76ef46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Liburan Bersama" class="timeline-image fade-in">
+                            </div>
+                        </div>
+                        <div class="timeline-item fade-in-right">
+                            <div class="timeline-icon">
+                                <i class="fas fa-ring"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date inv-sub fade-in">Februari 2023</div>
+                                <h3 class="timeline-title inv-sub fade-in">Lamaran</h3>
+                                <p class="inv-body fade-in">Di atas bukit dengan pemandangan sunset yang memukau, Justin melamar Sisca. Dengan air mata kebahagiaan, Sisca mengucapkan "Ya" yang mengubah hidup kami selamanya.</p>
+                                <img src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Lamaran" class="timeline-image fade-in">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
             <!-- Acara Section -->
             <section id="events" class="section">
                 <h2 class="section-title inv-sub fade-in">Acara</h2>
@@ -2269,65 +1910,6 @@
                 </div>
             </section>
             
-             <!-- Our Story Section dengan Background Slideshow -->
-            <section id="story" class="section our-story-section">
-                <div class="slideshow-background">
-                    <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80')"></div>
-                    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80')"></div>
-                    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80')"></div>
-                </div>
-                
-                <div class="content-overlay">
-                    <h2 class="section-title inv-sub fade-in">Our Story</h2>
-                    <div class="timeline">
-                        <div class="timeline-item fade-in-left">
-                            <div class="timeline-icon">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <div class="timeline-date inv-sub fade-in">Maret 2018</div>
-                                <h3 class="timeline-title inv-sub fade-in">Pertemuan Pertama</h3>
-                                <p class="inv-body fade-in">Kami pertama kali bertemu di acara ulang tahun teman bersama. Saat itu kami tidak menyangka bahwa pertemuan itu akan membawa kami pada perjalanan yang indah.</p>
-                                <img src="https://images.unsplash.com/photo-1529255484355-cb73c33c04bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Pertemuan Pertama" class="timeline-image fade-in">
-                            </div>
-                        </div>
-                        <div class="timeline-item fade-in-right">
-                            <div class="timeline-icon">
-                                <i class="fas fa-coffee"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <div class="timeline-date inv-sub fade-in">Juli 2019</div>
-                                <h3 class="timeline-title inv-sub fade-in">Kencan Pertama</h3>
-                                <p class="inv-body fade-in">Setelah beberapa bulan saling mengenal, akhirnya kami memutuskan untuk pergi kencan pertama di sebuah kafe kecil di pusat kota. Percakapan kami mengalir begitu natural.</p>
-                                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Kencan Pertama" class="timeline-image fade-in">
-                            </div>
-                        </div>
-                        <div class="timeline-item fade-in-left">
-                            <div class="timeline-icon">
-                                <i class="fas fa-plane"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <div class="timeline-date inv-sub fade-in">Desember 2020</div>
-                                <h3 class="timeline-title inv-sub fade-in">Liburan Bersama</h3>
-                                <p class="inv-body fade-in">Kami menghabiskan liburan akhir tahun di Bali. Perjalanan ini semakin mempererat ikatan kami dan membuat kami sadar bahwa kami ingin menghabiskan lebih banyak waktu bersama.</p>
-                                <img src="https://images.unsplash.com/photo-1533158307587-828f0a76ef46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Liburan Bersama" class="timeline-image fade-in">
-                            </div>
-                        </div>
-                        <div class="timeline-item fade-in-right">
-                            <div class="timeline-icon">
-                                <i class="fas fa-ring"></i>
-                            </div>
-                            <div class="timeline-content">
-                                <div class="timeline-date inv-sub fade-in">Februari 2023</div>
-                                <h3 class="timeline-title inv-sub fade-in">Lamaran</h3>
-                                <p class="inv-body fade-in">Di atas bukit dengan pemandangan sunset yang memukau, Justin melamar Sisca. Dengan air mata kebahagiaan, Sisca mengucapkan "Ya" yang mengubah hidup kami selamanya.</p>
-                                <img src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Lamaran" class="timeline-image fade-in">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <!-- Galeri Section dengan Slideshow -->
             <section id="gallery" class="section gallery-section">
                 <div class="slideshow-background">
@@ -2371,24 +1953,24 @@
                 </div>
             </section>
             
-            <!-- Ucapan & Doa Section - DIPERBAIKI -->
+            <!-- Ucapan & Doa Section -->
             <section id="wishes" class="section wishes-section">
                 <h2 class="section-title inv-sub fade-in">Ucapan & Doa</h2>
                 <div class="wishes-container">
-                    <form class="wish-form fade-in" id="wishForm">
+                    <div class="wish-form fade-in">
                         <div class="form-group">
                             <label for="name" class="form-label inv-body fade-in">Nama</label>
-                            <input type="text" id="name" class="form-input inv-body fade-in" placeholder="Masukkan nama Anda" required>
+                            <input type="text" id="name" class="form-input inv-body fade-in" placeholder="Masukkan nama Anda">
                         </div>
                         <div class="form-group">
                             <label for="message" class="form-label inv-body fade-in">Ucapan & Doa</label>
-                            <textarea id="message" class="form-textarea inv-body fade-in" placeholder="Tuliskan ucapan dan doa untuk kami" required></textarea>
+                            <textarea id="message" class="form-textarea inv-body fade-in" placeholder="Tuliskan ucapan dan doa untuk kami"></textarea>
                         </div>
-                        <button type="submit" class="submit-btn inv-body fade-in" id="submitWish">Kirim Ucapan</button>
-                    </form>
+                        <button class="submit-btn inv-body fade-in">Kirim Ucapan</button>
+                    </div>
                     
                     <div class="wishes-list">
-                        <!-- Ucapan akan dimuat otomatis di sini -->
+                        <div class="wish-item fade-in-left">
                     </div>
                 </div>
             </section>
@@ -2624,7 +2206,8 @@
                 document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
             }
 
-            const countdownInterval = setInterval(updateCountdown, 1000);
+            
+            setInterval(updateCountdown, 1000);
             updateCountdown();
             
             // Tampilkan rekening bank
@@ -2715,228 +2298,79 @@
                 });
             });
         });
-
-        // SISTEM UCAPAN & DOA YANG DIPERBAIKI
-        const scriptURL = "https://script.google.com/macros/s/AKfycbzhb1_r34Ir4dxD_GOhduIqtpYNtkY2jllBp3NOuJ1JboIoaXnYQJ_prEUBNswryqvI0Q/exec";
-
-        // Fungsi untuk mengirim ucapan - DIPERBAIKI
-        function setupWishForm() {
-            const wishForm = document.getElementById("wishForm");
-            
-            if (!wishForm) {
-                console.error("Form ucapan tidak ditemukan!");
-                return;
-            }
-
-            wishForm.addEventListener("submit", async (e) => {
-                e.preventDefault();
-                console.log("Form submitted!");
-
-                const name = document.getElementById("name").value.trim();
-                const message = document.getElementById("message").value.trim();
-
-                if (!name || !message) {
-                    showNotification("Harap isi nama dan ucapan sebelum mengirim.", "error");
-                    return;
-                }
-
-                // Tampilkan loading
-                const submitBtn = document.getElementById("submitWish");
-                const originalText = submitBtn.textContent;
-                submitBtn.textContent = "Mengirim...";
-                submitBtn.disabled = true;
-
-                try {
-                    console.log("Mengirim data:", { name, message });
-                    
-                    const formData = new FormData();
-                    formData.append("name", name);
-                    formData.append("message", message);
-                    
-                    const response = await fetch(scriptURL, {
-                        method: "POST",
-                        body: formData
-                    });
-
-                    console.log("Response status:", response.status);
-                    const result = await response.text();
-                    console.log("Response result:", result);
-                    
-                    if (result && result.includes("success")) {
-                        // Reset form
-                        document.getElementById("name").value = "";
-                        document.getElementById("message").value = "";
-                        
-                        // Tampilkan notifikasi sukses
-                        showNotification("Ucapan Anda berhasil dikirim! Terima kasih.", "success");
-                        
-                        // Refresh daftar ucapan
-                        loadWishes();
-                    } else {
-                        showNotification("Gagal mengirim ucapan. Coba lagi nanti.", "error");
-                    }
-                } catch (err) {
-                    console.error("Error!", err);
-                    showNotification("Gagal mengirim ucapan. Coba lagi nanti.", "error");
-                } finally {
-                    // Reset button
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                }
-            });
-        }
-
-        // Fungsi untuk memuat daftar ucapan - DIPERBAIKI
-        async function loadWishes() {
-            try {
-                console.log("Memuat ucapan...");
-                const res = await fetch(scriptURL + "?action=getWishes&t=" + new Date().getTime());
-                
-                if (!res.ok) {
-                    throw new Error(`HTTP error! status: ${res.status}`);
-                }
-                
-                const data = await res.json();
-                console.log("Data ucapan diterima:", data);
-
-                const list = document.querySelector(".wishes-list");
-                if (!list) {
-                    console.error("Element wishes-list tidak ditemukan!");
-                    return;
-                }
-
-                list.innerHTML = "";
-
-                // Cek jika data valid
-                if (data && Array.isArray(data) && data.length > 0) {
-                    // Urutkan dari yang terbaru
-                    data.reverse().forEach((wish, index) => {
-                        const item = document.createElement("div");
-                        item.className = `wish-item fade-in-left`;
-                        item.style.animationDelay = `${index * 0.1}s`;
-                        
-                        // Format tanggal
-                        let timestamp = "";
-                        if (wish.timestamp) {
-                            try {
-                                const date = new Date(wish.timestamp);
-                                timestamp = date.toLocaleDateString('id-ID', {
-                                    day: 'numeric',
-                                    month: 'long',
-                                    year: 'numeric',
-                                    hour: '2-digit',
-                                    minute: '2-digit'
-                                });
-                            } catch (e) {
-                                timestamp = wish.timestamp.toString();
-                            }
-                        }
-                        
-                        item.innerHTML = `
-                            <div class="wish-author">
-                                <i class="fas fa-user" style="margin-right: 8px;"></i>
-                                ${wish.name || 'Anonymous'}
-                            </div>
-                            <div class="wish-message">"${wish.message || ''}"</div>
-                            <div class="wish-time">
-                                <i class="far fa-clock" style="margin-right: 5px;"></i>
-                                ${timestamp}
-                            </div>
-                        `;
-                        list.appendChild(item);
-                        
-                        // Trigger animation
-                        setTimeout(() => {
-                            item.classList.add('show');
-                        }, 100);
-                    });
-                } else {
-                    list.innerHTML = `
-                        <div class="wish-item" style="text-align: center; padding: 40px 20px;">
-                            <i class="fas fa-comment-slash" style="font-size: 2rem; color: #e2d5f0; margin-bottom: 15px;"></i>
-                            <div>Belum ada ucapan. Jadilah yang pertama!</div>
-                        </div>
-                    `;
-                }
-            } catch (err) {
-                console.error("Error load wishes:", err);
-                const list = document.querySelector(".wishes-list");
-                if (list) {
-                    list.innerHTML = `
-                        <div class="wish-item" style="text-align: center; color: #ff6b6b;">
-                            <i class="fas fa-exclamation-triangle" style="margin-right: 8px;"></i>
-                            Gagal memuat ucapan. Silakan refresh halaman.
-                        </div>
-                    `;
-                }
-            }
-        }
-
-        // Fungsi untuk menampilkan notifikasi - DIPERBAIKI
-        function showNotification(message, type = "info") {
-            // Hapus notifikasi lama jika ada
-            const oldNotifications = document.querySelectorAll('.notification');
-            oldNotifications.forEach(notif => notif.remove());
-            
-            // Buat element notifikasi
-            const notification = document.createElement("div");
-            notification.className = `notification ${type === 'error' ? 'error' : ''}`;
-            notification.innerHTML = `
-                <div class="notification-content">
-                    <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
-                    <span>${message}</span>
-                </div>
-            `;
-            
-            document.body.appendChild(notification);
-            
-            // Hapus otomatis setelah 4 detik
-            setTimeout(() => {
-                if (notification.parentNode) {
-                    notification.parentNode.removeChild(notification);
-                }
-            }, 4000);
-        }
-
-        // Inisialisasi sistem ucapan - DIPERBAIKI
-        function initWishesSystem() {
-            console.log("Menginisialisasi sistem ucapan...");
-            
-            // Setup form
-            setupWishForm();
-            
-            // Load ucapan saat halaman utama terbuka
-            const openInvitationBtn = document.getElementById('openInvitation');
-            if (openInvitationBtn) {
-                openInvitationBtn.addEventListener('click', function() {
-                    console.log("Tombol buka undangan diklik");
-                    // Tunggu sebentar sampai halaman utama terbuka sepenuhnya
-                    setTimeout(() => {
-                        console.log("Memuat ucapan setelah buka undangan");
-                        loadWishes();
-                    }, 2000);
-                });
-            }
-            
-            // Juga load jika langsung ke halaman utama (untuk testing)
-            if (document.getElementById('mainInvitation') && document.getElementById('mainInvitation').style.display === 'block') {
-                console.log("Langsung ke halaman utama, loading ucapan...");
-                loadWishes();
-            }
-        }
-
-        // Panggil inisialisasi saat DOM siap
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log("DOM fully loaded");
-            initWishesSystem();
-        });
-
-        // Auto-refresh ucapan setiap 30 detik
-        setInterval(() => {
-            if (document.getElementById('mainInvitation') && document.getElementById('mainInvitation').style.display === 'block') {
-                loadWishes();
-            }
-        }, 30000);
     </script>
+<div id="toast" class="toast">Ucapan berhasil dikirim 🎉</div>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+  import { getFirestore, collection, addDoc, onSnapshot, query, orderBy } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyA7ov2Oy2nTrygrwlSxevTTLOO3CQp1Gy0",
+    authDomain: "undangan-digital-e8182.firebaseapp.com",
+    projectId: "undangan-digital-e8182",
+    storageBucket: "undangan-digital-e8182.firebasestorage.app",
+    messagingSenderId: "751584444577",
+    appId: "1:751584444577:web:477931bf234026d0d9f0e0",
+    measurementId: "G-3CZTBREST7"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const nameInput = document.getElementById("name");
+  const messageInput = document.getElementById("message");
+  const submitBtn = document.querySelector(".submit-btn");
+  const wishesList = document.querySelector(".wishes-list");
+
+  function showToast(message) {
+    const toast = document.getElementById("toast");
+    toast.innerText = message;
+    toast.className = "toast show";
+    setTimeout(() => {
+      toast.className = toast.className.replace("show", "");
+    }, 3000);
+  }
+
+  submitBtn.addEventListener("click", async () => {
+    const name = nameInput.value.trim();
+    const message = messageInput.value.trim();
+
+    if (!name || !message) {
+      showToast("Harap isi nama dan pesan ❗");
+      return;
+    }
+
+    try {
+      await addDoc(collection(db, "wishes"), {
+        name,
+        message,
+        createdAt: new Date()
+      });
+      nameInput.value = "";
+      messageInput.value = "";
+      showToast("Ucapan berhasil dikirim 🎉");
+    } catch (error) {
+      console.error("Error:", error);
+      showToast("Gagal mengirim ucapan ❌");
+    }
+  });
+
+  const q = query(collection(db, "wishes"), orderBy("createdAt", "desc"));
+  onSnapshot(q, (snapshot) => {
+    wishesList.innerHTML = "";
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+      const item = document.createElement("div");
+      item.classList.add("wish-item");
+      item.innerHTML = `
+        <div class="wish-author">${data.name}</div>
+        <div class="wish-message">${data.message}</div>
+      `;
+      wishesList.appendChild(item);
+    });
+  });
+</script>
+
 </body>
 </html>
