@@ -1287,21 +1287,19 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            background: white;
-            padding: 15px 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            max-width: 350px;
-            transform: translateX(400px);
-            transition: transform 0.5s ease;
-            border-left: 4px solid #8a6db4;
+            background: #4caf50; /* hijau untuk sukses */
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 9999;
+            font-size: 14px;
+            opacity: 0.95;
         }
         
         .notification.show {
-            transform: translateX(0);
+            opacity: 0.95;
+            transform: translateY(0); /* geser ke posisi normal */
         }
         
         .notification-icon {
@@ -2099,6 +2097,10 @@
             }
             
             notification.classList.add('show');
+             // auto hide setelah 3 detik
+            setTimeout(() => {
+                hideNotification(notification);
+            }, 3000);
             
             // Sembunyikan notifikasi setelah 5 detik
             setTimeout(() => {
@@ -2490,6 +2492,7 @@
     </script>
 </body>
 </html>
+
 
 
 
