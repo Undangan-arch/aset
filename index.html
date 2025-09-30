@@ -14,7 +14,6 @@
     <!-- Bootstrap untuk grid system -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* CSS yang sudah ada tetap dipertahankan */
         * {
             margin: 0;
             padding: 0;
@@ -27,10 +26,10 @@
             color: #5a4b69;
             overflow-x: hidden;
             line-height: 1.6;
-            padding-bottom: 70px; /* Space for bottom navigation */
+            padding-bottom: 70px;
         }
         
-        /* Font Classes - DIPERBARUI */
+        /* Font Classes */
         .inv-title {
             font-family: 'Playball', 'Segoe Script', 'Brush Script MT', cursive;
         }
@@ -66,7 +65,7 @@
             transform: translate(0);
         }
         
-        /* Ornamen Bunga Samping - Ukuran Lebih Kecil dan Minimalis */
+        /* Ornamen Bunga Samping */
         .side-floral-decoration {
             position: fixed;
             z-index: 1;
@@ -88,12 +87,6 @@
             right: 15px;
             bottom: 100px;
             transform: rotate(3deg) scaleX(-1) scale(0.9);
-        }
-        
-        /* Efek hover halus pada bunga */
-        .side-floral-decoration:hover {
-            transform: scale(1.05);
-            filter: drop-shadow(0 4px 8px rgba(90, 75, 105, 0.15));
         }
         
         /* Halaman Pembuka */
@@ -258,7 +251,7 @@
             padding: 30px 20px;
             background: transparent;
             border-radius: 10px;
-            margin-top: 200px;
+            margin-top: 330px;
             animation: fadeIn 1.5s ease-out 1.2s both;
             position: relative;
             z-index: 2;
@@ -307,9 +300,9 @@
         }
         
         .footer {
-            background: #5a4b6900;   /* opsional: ganti warna sesuai tema */
+            background: #5a4b6900;
             color: #000000;
-            text-align: center;    /* teks rata tengah */
+            text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -365,8 +358,8 @@
         }
         
         .main-floral-bottom-left {
-            position: fixed;   /* ganti absolute jadi fixed */
-            bottom: 80px;      /* naik 80px */
+            position: fixed;
+            bottom: 80px;
             left: 0;
             width: 80px;
             z-index: 10;
@@ -583,13 +576,12 @@
             z-index: 2;
         }
         
-        /* Pasangan section - DIPERBARUI */
+        /* Pasangan section */
         .couple-section {
             background-color: #faf9fc;
             text-align: center;
         }
         
-        /* CSS Baru untuk Pasangan Card */
         .pasangan-card {
             background: white;
             border-radius: 10px;
@@ -990,6 +982,12 @@
             box-shadow: 0 5px 15px rgba(138, 109, 180, 0.3);
         }
         
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
         .wishes-list {
             margin-top: 40px;
         }
@@ -1011,11 +1009,20 @@
             font-weight: 600;
             color: #8a6db4;
             margin-bottom: 8px;
+            font-size: 1.1rem;
         }
         
         .wish-message {
             color: #5a4b69;
             font-style: italic;
+            line-height: 1.6;
+        }
+        
+        .wish-time {
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 10px;
+            text-align: right;
         }
         
         /* Gift Section */
@@ -1139,88 +1146,6 @@
             background: #d0c0e6;
         }
         
-        /* Modal Galeri */
-        .gallery-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .modal-content {
-            max-width: 90%;
-            max-height: 90%;
-            position: relative;
-        }
-        
-        .modal-image {
-            max-width: 100%;
-            max-height: 90vh;
-            border-radius: 10px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
-        }
-        
-        .close-modal {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            background: rgba(0, 0, 0, 0.5);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .modal-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        
-        .modal-nav:hover {
-            background: rgba(0, 0, 0, 0.7);
-        }
-        
-        .prev-btn {
-            left: 20px;
-        }
-        
-        .next-btn {
-            right: 20px;
-        }
-        
-        .image-counter {
-            position: absolute;
-            bottom: -40px;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            color: white;
-            font-size: 1.2rem;
-        }
-        
         /* Maps Section */
         .maps-section {
             background-color: #faf9fc;
@@ -1305,7 +1230,7 @@
             backdrop-filter: blur(10px);
             box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            display: none; /* Awalnya disembunyikan */
+            display: none;
         }
         
         .bottom-nav-container {
@@ -1355,6 +1280,74 @@
             font-size: 0.7rem;
             font-weight: 500;
             text-align: center;
+        }
+        
+        /* Notifikasi */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            max-width: 350px;
+            transform: translateX(400px);
+            transition: transform 0.5s ease;
+            border-left: 4px solid #8a6db4;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        .notification-icon {
+            font-size: 1.5rem;
+            color: #8a6db4;
+            margin-right: 15px;
+        }
+        
+        .notification-content {
+            flex: 1;
+        }
+        
+        .notification-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #5a4b69;
+        }
+        
+        .notification-message {
+            font-size: 0.9rem;
+            color: #7a6b8a;
+        }
+        
+        .notification-close {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: #7a6b8a;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        /* Loading Spinner */
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
         
         /* Animasi Kustom */
@@ -1547,6 +1540,12 @@
             .nav-icon {
                 font-size: 1.1rem;
             }
+            
+            .notification {
+                right: 10px;
+                left: 10px;
+                max-width: none;
+            }
         }
         
         @media (max-width: 480px) {
@@ -1618,32 +1617,7 @@
                 font-size: 1rem;
             }
         }
-    
-/* Toast Notification */
-.toast {
-  visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
-  background: linear-gradient(135deg, #8a6db4 0%, #b19cd9 100%);
-  color: white;
-  text-align: center;
-  border-radius: 8px;
-  padding: 14px 20px;
-  position: fixed;
-  z-index: 9999;
-  left: 50%;
-  bottom: 30px;
-  font-size: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: visibility 0s, opacity 0.5s ease;
-  opacity: 0;
-}
-.toast.show {
-  visibility: visible;
-  opacity: 1;
-}
-
-</style>
+    </style>
 </head>
 <body>
     <!-- Ornamen Bunga Samping - Ukuran Minimalis -->
@@ -1712,7 +1686,7 @@
                 <div class="main-floral-divider fade-in"></div>
             </div>
             
-            <!-- Pasangan Section - DIPERBARUI -->
+            <!-- Pasangan Section -->
             <section id="couple" class="section couple-section">
                 <h2 class="section-title inv-sub fade-in">Yang Berbahagia</h2>
                 <div class="container">
@@ -1966,11 +1940,17 @@
                             <label for="message" class="form-label inv-body fade-in">Ucapan & Doa</label>
                             <textarea id="message" class="form-textarea inv-body fade-in" placeholder="Tuliskan ucapan dan doa untuk kami"></textarea>
                         </div>
-                        <button class="submit-btn inv-body fade-in">Kirim Ucapan</button>
+                        <button class="submit-btn inv-body fade-in" id="submitWish">
+                            <span id="submitText">Kirim Ucapan</span>
+                            <span id="submitLoading" class="loading-spinner" style="display: none;"></span>
+                        </button>
                     </div>
                     
-                    <div class="wishes-list">
-                        <div class="wish-item fade-in-left">
+                    <div class="wishes-list" id="wishesList">
+                        <!-- Pesan akan dimuat di sini -->
+                        <div class="wish-item fade-in">
+                            <div class="wish-author">Sedang memuat ucapan...</div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -2019,19 +1999,18 @@
         </div>
     </div>
     
-    <!-- Modal Galeri -->
-    <div class="gallery-modal" id="galleryModal">
-        <div class="modal-content">
-            <span class="close-modal" id="closeModal">&times;</span>
-            <div class="modal-nav prev-btn" id="prevBtn">
-                <i class="fas fa-chevron-left"></i>
-            </div>
-            <div class="modal-nav next-btn" id="nextBtn">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-            <img src="" alt="" class="modal-image" id="modalImage">
-            <div class="image-counter inv-body" id="imageCounter">1 / 6</div>
+    <!-- Notifikasi -->
+    <div class="notification" id="notification">
+        <div class="notification-icon">
+            <i class="fas fa-check-circle"></i>
         </div>
+        <div class="notification-content">
+            <div class="notification-title inv-body" id="notificationTitle">Berhasil</div>
+            <div class="notification-message inv-body" id="notificationMessage">Pesan Anda telah terkirim</div>
+        </div>
+        <button class="notification-close" id="notificationClose">
+            <i class="fas fa-times"></i>
+        </button>
     </div>
     
     <!-- Tombol Musik -->
@@ -2075,6 +2054,217 @@
     </audio>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import Firebase functions
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyA7ov2Oy2nTrygrwlSxevTTLOO3CQp1Gy0",
+            authDomain: "undangan-digital-e8182.firebaseapp.com",
+            databaseURL: "https://undangan-digital-e8182-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "undangan-digital-e8182",
+            storageBucket: "undangan-digital-e8182.firebasestorage.app",
+            messagingSenderId: "751584444577",
+            appId: "1:751584444577:web:477931bf234026d0d9f0e0",
+            measurementId: "G-3CZTBREST7"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // Referensi ke database untuk menyimpan dan mengambil pesan
+        const wishesRef = ref(database, 'wedding_wishes');
+        
+        // Fungsi untuk menampilkan notifikasi
+        function showNotification(title, message, isSuccess = true) {
+            const notification = document.getElementById('notification');
+            const notificationTitle = document.getElementById('notificationTitle');
+            const notificationMessage = document.getElementById('notificationMessage');
+            
+            notificationTitle.textContent = title;
+            notificationMessage.textContent = message;
+            
+            // Ubah warna notifikasi berdasarkan jenis pesan
+            if (isSuccess) {
+                notification.style.borderLeftColor = '#8a6db4';
+                notification.querySelector('.notification-icon').innerHTML = '<i class="fas fa-check-circle"></i>';
+            } else {
+                notification.style.borderLeftColor = '#e74c3c';
+                notification.querySelector('.notification-icon').innerHTML = '<i class="fas fa-exclamation-circle"></i>';
+            }
+            
+            notification.classList.add('show');
+            
+            // Sembunyikan notifikasi setelah 5 detik
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 5000);
+        }
+        
+        // Fungsi untuk mengirim pesan ke Firebase
+        function submitWish(name, message) {
+            // Validasi input
+            if (!name.trim()) {
+                showNotification('Peringatan', 'Nama harus diisi', false);
+                return false;
+            }
+            
+            if (!message.trim()) {
+                showNotification('Peringatan', 'Pesan harus diisi', false);
+                return false;
+            }
+            
+            // Tampilkan loading state
+            const submitBtn = document.getElementById('submitWish');
+            const submitText = document.getElementById('submitText');
+            const submitLoading = document.getElementById('submitLoading');
+            
+            submitText.style.display = 'none';
+            submitLoading.style.display = 'inline-block';
+            submitBtn.disabled = true;
+            
+            // Buat data pesan
+            const wishData = {
+                name: name.trim(),
+                message: message.trim(),
+                timestamp: new Date().toISOString(),
+                date: new Date().toLocaleDateString('id-ID'),
+                time: new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' })
+            };
+            
+            console.log('Mengirim pesan:', wishData);
+            
+            // Kirim ke Firebase
+            push(wishesRef, wishData)
+                .then(() => {
+                    console.log('Pesan berhasil dikirim');
+                    // Reset form
+                    document.getElementById('name').value = '';
+                    document.getElementById('message').value = '';
+                    
+                    // Tampilkan notifikasi sukses
+                    showNotification('Berhasil', 'Pesan Anda telah terkirim');
+                    return true;
+                })
+                .catch((error) => {
+                    console.error('Error mengirim pesan:', error);
+                    showNotification('Error', 'Terjadi kesalahan saat mengirim pesan: ' + error.message, false);
+                    return false;
+                })
+                .finally(() => {
+                    // Kembalikan tombol ke keadaan normal
+                    submitText.style.display = 'inline';
+                    submitLoading.style.display = 'none';
+                    submitBtn.disabled = false;
+                });
+                
+            return true;
+        }
+        
+        // Fungsi untuk memuat pesan dari Firebase
+        function loadWishes() {
+            console.log('Memuat pesan dari Firebase...');
+            
+            onValue(wishesRef, (snapshot) => {
+                const wishesList = document.getElementById('wishesList');
+                
+                if (snapshot.exists()) {
+                    const wishes = snapshot.val();
+                    const wishesArray = [];
+                    
+                    console.log('Data diterima:', wishes);
+                    
+                    // Konversi objek ke array
+                    for (const key in wishes) {
+                        wishesArray.push({
+                            id: key,
+                            ...wishes[key]
+                        });
+                    }
+                    
+                    // Urutkan berdasarkan timestamp (terbaru di atas)
+                    wishesArray.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+                    
+                    // Kosongkan daftar
+                    wishesList.innerHTML = '';
+                    
+                    // Tampilkan pesan
+                    wishesArray.forEach(wish => {
+                        const wishItem = document.createElement('div');
+                        wishItem.className = 'wish-item fade-in';
+                        wishItem.innerHTML = `
+                            <div class="wish-author">${wish.name}</div>
+                            <div class="wish-message">${wish.message}</div>
+                            <div class="wish-time">${wish.date} ${wish.time}</div>
+                        `;
+                        wishesList.appendChild(wishItem);
+                    });
+                    
+                    // Trigger animasi fade-in
+                    setTimeout(() => {
+                        document.querySelectorAll('.wish-item').forEach(item => {
+                            item.classList.add('show');
+                        });
+                    }, 100);
+                    
+                    console.log(`Berhasil memuat ${wishesArray.length} pesan`);
+                } else {
+                    wishesList.innerHTML = `
+                        <div class="wish-item fade-in">
+                            <div class="wish-message" style="text-align: center; color: #7a6b8a;">
+                                Belum ada ucapan. Jadilah yang pertama mengucapkan!
+                            </div>
+                        </div>
+                    `;
+                    console.log('Belum ada pesan di database');
+                }
+            }, (error) => {
+                console.error('Error memuat pesan:', error);
+                const wishesList = document.getElementById('wishesList');
+                wishesList.innerHTML = `
+                    <div class="wish-item fade-in">
+                        <div class="wish-message" style="text-align: center; color: #e74c3c;">
+                            Gagal memuat ucapan. Pastikan koneksi internet stabil.
+                        </div>
+                    </div>
+                `;
+            });
+        }
+        
+        // Event listener untuk tombol kirim pesan
+        document.getElementById('submitWish').addEventListener('click', function() {
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+            submitWish(name, message);
+        });
+        
+        // Event listener untuk menutup notifikasi
+        document.getElementById('notificationClose').addEventListener('click', function() {
+            document.getElementById('notification').classList.remove('show');
+        });
+        
+        // Event listener untuk form (bisa submit dengan Enter)
+        document.getElementById('message').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && e.ctrlKey) {
+                const name = document.getElementById('name').value;
+                const message = document.getElementById('message').value;
+                submitWish(name, message);
+            }
+        });
+        
+        // Muat pesan saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Halaman dimuat, memulai Firebase...');
+            loadWishes();
+        });
+    </script>
+
+    <!-- Script untuk fungsi lainnya -->
     <script>
         // JavaScript untuk interaktivitas
         document.addEventListener('DOMContentLoaded', function() {
@@ -2206,8 +2396,7 @@
                 document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
             }
 
-            
-            setInterval(updateCountdown, 1000);
+            const countdownInterval = setInterval(updateCountdown, 1000);
             updateCountdown();
             
             // Tampilkan rekening bank
@@ -2299,78 +2488,5 @@
             });
         });
     </script>
-<div id="toast" class="toast">Ucapan berhasil dikirim 🎉</div>
-
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
-  import { getFirestore, collection, addDoc, onSnapshot, query, orderBy } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyA7ov2Oy2nTrygrwlSxevTTLOO3CQp1Gy0",
-    authDomain: "undangan-digital-e8182.firebaseapp.com",
-    projectId: "undangan-digital-e8182",
-    storageBucket: "undangan-digital-e8182.firebasestorage.app",
-    messagingSenderId: "751584444577",
-    appId: "1:751584444577:web:477931bf234026d0d9f0e0",
-    measurementId: "G-3CZTBREST7"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  const nameInput = document.getElementById("name");
-  const messageInput = document.getElementById("message");
-  const submitBtn = document.querySelector(".submit-btn");
-  const wishesList = document.querySelector(".wishes-list");
-
-  function showToast(message) {
-    const toast = document.getElementById("toast");
-    toast.innerText = message;
-    toast.className = "toast show";
-    setTimeout(() => {
-      toast.className = toast.className.replace("show", "");
-    }, 3000);
-  }
-
-  submitBtn.addEventListener("click", async () => {
-    const name = nameInput.value.trim();
-    const message = messageInput.value.trim();
-
-    if (!name || !message) {
-      showToast("Harap isi nama dan pesan ❗");
-      return;
-    }
-
-    try {
-      await addDoc(collection(db, "wishes"), {
-        name,
-        message,
-        createdAt: new Date()
-      });
-      nameInput.value = "";
-      messageInput.value = "";
-      showToast("Ucapan berhasil dikirim 🎉");
-    } catch (error) {
-      console.error("Error:", error);
-      showToast("Gagal mengirim ucapan ❌");
-    }
-  });
-
-  const q = query(collection(db, "wishes"), orderBy("createdAt", "desc"));
-  onSnapshot(q, (snapshot) => {
-    wishesList.innerHTML = "";
-    snapshot.forEach((doc) => {
-      const data = doc.data();
-      const item = document.createElement("div");
-      item.classList.add("wish-item");
-      item.innerHTML = `
-        <div class="wish-author">${data.name}</div>
-        <div class="wish-message">${data.message}</div>
-      `;
-      wishesList.appendChild(item);
-    });
-  });
-</script>
-
 </body>
 </html>
