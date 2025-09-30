@@ -250,8 +250,8 @@
         .greeting {
             padding: 30px 20px;
             background: transparent;
-            border-radius: 10px;
-            margin-top: 100px;
+            border-radius: 20px;
+            margin-top: 90px;
             animation: fadeIn 1.5s ease-out 1.2s both;
             position: relative;
             z-index: 2;
@@ -2148,7 +2148,7 @@
                     document.getElementById('message').value = '';
                     
                     // Tampilkan notifikasi sukses
-                    showNotification('Berhasil', 'Pesan Anda telah terkirim');
+                    showNotification('Berhasil');
                     return true;
                 })
                 .catch((error) => {
@@ -2490,5 +2490,6 @@
     </script>
 </body>
 </html>
+
 
 
